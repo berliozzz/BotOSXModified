@@ -1,0 +1,22 @@
+PODS:
+  - AFNetworking (3.0.2):
+    - AFNetworking/NSURLSession (= 3.0.2)
+    - AFNetworking/Reachability (= 3.0.2)
+    - AFNetworking/Security (= 3.0.2)
+    - AFNetworking/Serialization (= 3.0.2)
+    - AFNetworking/UIKit (= 3.0.2)
+  - AFNetworking/NSURLSession (3.0.2):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.2)
+  - AFNetworking/Security (3.0.2)
+  - AFNetworking/Serialization (3.0.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 6fe1aefd1d6cdc8b3f5ead9abaecaea5e6c5c55e
+
+COCOAPODS: 0.39.0

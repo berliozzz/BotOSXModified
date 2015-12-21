@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65441EDB3D8416234F9D3873 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142C290660A2B86D925379B8 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		9A1DC8A81C21F24D0001AB58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */; };
+		9A1DC8AB1C21F24D0001AB58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AA1C21F24D0001AB58 /* main.m */; };
+		9A1DC8AE1C21F24D0001AB58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AD1C21F24D0001AB58 /* ViewController.m */; };
+		9A1DC8B01C21F24D0001AB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AF1C21F24D0001AB58 /* Assets.xcassets */; };
+		9A1DC8B31C21F24D0001AB58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1DC8B11C21F24D0001AB58 /* Main.storyboard */; };
+		9A1DC8BE1C21F24D0001AB58 /* BotOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8BD1C21F24D0001AB58 /* BotOSXTests.m */; };
+		9A1DC8C91C21F24D0001AB58 /* BotOSXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8C81C21F24D0001AB58 /* BotOSXUITests.m */; };
+		9A35CF9F1C27664E00A2BFCF /* icon16.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF981C27664E00A2BFCF /* icon16.png */; };
+		9A35CFA01C27664E00A2BFCF /* icon32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF991C27664E00A2BFCF /* icon32.png */; };
+		9A35CFA11C27664E00A2BFCF /* icon64.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9A1C27664E00A2BFCF /* icon64.png */; };
+		9A35CFA21C27664E00A2BFCF /* icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9B1C27664E00A2BFCF /* icon128.png */; };
+		9A35CFA31C27664E00A2BFCF /* icon256.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9C1C27664E00A2BFCF /* icon256.png */; };
+		9A35CFA41C27664E00A2BFCF /* icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9D1C27664E00A2BFCF /* icon512.png */; };
+		9A35CFA51C27664E00A2BFCF /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9E1C27664E00A2BFCF /* icon1024.png */; };
+		9A8BDC921C246EBD0066F99A /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDC901C246EBD0066F99A /* pause.png */; };
+		9A8BDC931C246EBD0066F99A /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDC911C246EBD0066F99A /* play.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A1DC8BA1C21F24D0001AB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1DC89B1C21F24C0001AB58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A1DC8A21C21F24D0001AB58;
+			remoteInfo = BotOSX;
+		};
+		9A1DC8C51C21F24D0001AB58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1DC89B1C21F24C0001AB58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A1DC8A21C21F24D0001AB58;
+			remoteInfo = BotOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		142C290660A2B86D925379B8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FFB19CCD04AB61FB48D1B7D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		86F3B474B89DD3656A521C8E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9A1DC8A31C21F24D0001AB58 /* BotOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BotOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1DC8A61C21F24D0001AB58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9A1DC8AA1C21F24D0001AB58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A1DC8AC1C21F24D0001AB58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9A1DC8AD1C21F24D0001AB58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9A1DC8AF1C21F24D0001AB58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A1DC8B21C21F24D0001AB58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A1DC8B41C21F24D0001AB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A1DC8B91C21F24D0001AB58 /* BotOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1DC8BD1C21F24D0001AB58 /* BotOSXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BotOSXTests.m; sourceTree = "<group>"; };
+		9A1DC8BF1C21F24D0001AB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A1DC8C41C21F24D0001AB58 /* BotOSXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotOSXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1DC8C81C21F24D0001AB58 /* BotOSXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BotOSXUITests.m; sourceTree = "<group>"; };
+		9A1DC8CA1C21F24D0001AB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A35CF981C27664E00A2BFCF /* icon16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon16.png; sourceTree = "<group>"; };
+		9A35CF991C27664E00A2BFCF /* icon32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon32.png; sourceTree = "<group>"; };
+		9A35CF9A1C27664E00A2BFCF /* icon64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon64.png; sourceTree = "<group>"; };
+		9A35CF9B1C27664E00A2BFCF /* icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon128.png; sourceTree = "<group>"; };
+		9A35CF9C1C27664E00A2BFCF /* icon256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon256.png; sourceTree = "<group>"; };
+		9A35CF9D1C27664E00A2BFCF /* icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon512.png; sourceTree = "<group>"; };
+		9A35CF9E1C27664E00A2BFCF /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
+		9A8BDC901C246EBD0066F99A /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		9A8BDC911C246EBD0066F99A /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A1DC8A01C21F24D0001AB58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65441EDB3D8416234F9D3873 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1DC8B61C21F24D0001AB58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1DC8C11C21F24D0001AB58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2598C8255D768D3B0F4D82E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FFB19CCD04AB61FB48D1B7D /* Pods.debug.xcconfig */,
+				86F3B474B89DD3656A521C8E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		33915917384F9F408D1AEEC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				142C290660A2B86D925379B8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A1DC89A1C21F24C0001AB58 = {
+			isa = PBXGroup;
+			children = (
+				9A1DC8A51C21F24D0001AB58 /* BotOSX */,
+				9A1DC8BC1C21F24D0001AB58 /* BotOSXTests */,
+				9A1DC8C71C21F24D0001AB58 /* BotOSXUITests */,
+				9A1DC8A41C21F24D0001AB58 /* Products */,
+				2598C8255D768D3B0F4D82E8 /* Pods */,
+				33915917384F9F408D1AEEC6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A1DC8A41C21F24D0001AB58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A1DC8A31C21F24D0001AB58 /* BotOSX.app */,
+				9A1DC8B91C21F24D0001AB58 /* BotOSXTests.xctest */,
+				9A1DC8C41C21F24D0001AB58 /* BotOSXUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A1DC8A51C21F24D0001AB58 /* BotOSX */ = {
+			isa = PBXGroup;
+			children = (
+				9A463F771C2764C60062CADD /* Icons */,
+				9A1DC8A61C21F24D0001AB58 /* AppDelegate.h */,
+				9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */,
+				9A1DC8AC1C21F24D0001AB58 /* ViewController.h */,
+				9A1DC8AD1C21F24D0001AB58 /* ViewController.m */,
+				9A1DC8AF1C21F24D0001AB58 /* Assets.xcassets */,
+				9A1DC8B11C21F24D0001AB58 /* Main.storyboard */,
+				9A1DC8B41C21F24D0001AB58 /* Info.plist */,
+				9A8BDC8F1C246EBD0066F99A /* ImageFiles */,
+				9A1DC8A91C21F24D0001AB58 /* Supporting Files */,
+			);
+			path = BotOSX;
+			sourceTree = "<group>";
+		};
+		9A1DC8A91C21F24D0001AB58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A1DC8AA1C21F24D0001AB58 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A1DC8BC1C21F24D0001AB58 /* BotOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A1DC8BD1C21F24D0001AB58 /* BotOSXTests.m */,
+				9A1DC8BF1C21F24D0001AB58 /* Info.plist */,
+			);
+			path = BotOSXTests;
+			sourceTree = "<group>";
+		};
+		9A1DC8C71C21F24D0001AB58 /* BotOSXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A1DC8C81C21F24D0001AB58 /* BotOSXUITests.m */,
+				9A1DC8CA1C21F24D0001AB58 /* Info.plist */,
+			);
+			path = BotOSXUITests;
+			sourceTree = "<group>";
+		};
+		9A463F771C2764C60062CADD /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				9A35CF981C27664E00A2BFCF /* icon16.png */,
+				9A35CF991C27664E00A2BFCF /* icon32.png */,
+				9A35CF9A1C27664E00A2BFCF /* icon64.png */,
+				9A35CF9B1C27664E00A2BFCF /* icon128.png */,
+				9A35CF9C1C27664E00A2BFCF /* icon256.png */,
+				9A35CF9D1C27664E00A2BFCF /* icon512.png */,
+				9A35CF9E1C27664E00A2BFCF /* icon1024.png */,
+			);
+			name = Icons;
+			path = icons;
+			sourceTree = "<group>";
+		};
+		9A8BDC8F1C246EBD0066F99A /* ImageFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9A8BDC901C246EBD0066F99A /* pause.png */,
+				9A8BDC911C246EBD0066F99A /* play.png */,
+			);
+			path = ImageFiles;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A1DC8A21C21F24D0001AB58 /* BotOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1DC8CD1C21F24D0001AB58 /* Build configuration list for PBXNativeTarget "BotOSX" */;
+			buildPhases = (
+				E9D761C3898E5F8E6820C913 /* Check Pods Manifest.lock */,
+				9A1DC89F1C21F24D0001AB58 /* Sources */,
+				9A1DC8A01C21F24D0001AB58 /* Frameworks */,
+				9A1DC8A11C21F24D0001AB58 /* Resources */,
+				6DE5F3528986FC9DC71A8668 /* Embed Pods Frameworks */,
+				583CAE5008D93C321151CEF1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BotOSX;
+			productName = BotOSX;
+			productReference = 9A1DC8A31C21F24D0001AB58 /* BotOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A1DC8B81C21F24D0001AB58 /* BotOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1DC8D01C21F24D0001AB58 /* Build configuration list for PBXNativeTarget "BotOSXTests" */;
+			buildPhases = (
+				9A1DC8B51C21F24D0001AB58 /* Sources */,
+				9A1DC8B61C21F24D0001AB58 /* Frameworks */,
+				9A1DC8B71C21F24D0001AB58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A1DC8BB1C21F24D0001AB58 /* PBXTargetDependency */,
+			);
+			name = BotOSXTests;
+			productName = BotOSXTests;
+			productReference = 9A1DC8B91C21F24D0001AB58 /* BotOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A1DC8C31C21F24D0001AB58 /* BotOSXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1DC8D31C21F24D0001AB58 /* Build configuration list for PBXNativeTarget "BotOSXUITests" */;
+			buildPhases = (
+				9A1DC8C01C21F24D0001AB58 /* Sources */,
+				9A1DC8C11C21F24D0001AB58 /* Frameworks */,
+				9A1DC8C21C21F24D0001AB58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A1DC8C61C21F24D0001AB58 /* PBXTargetDependency */,
+			);
+			name = BotOSXUITests;
+			productName = BotOSXUITests;
+			productReference = 9A1DC8C41C21F24D0001AB58 /* BotOSXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A1DC89B1C21F24C0001AB58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Nikolay Berlioz";
+				TargetAttributes = {
+					9A1DC8A21C21F24D0001AB58 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					9A1DC8B81C21F24D0001AB58 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9A1DC8A21C21F24D0001AB58;
+					};
+					9A1DC8C31C21F24D0001AB58 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9A1DC8A21C21F24D0001AB58;
+					};
+				};
+			};
+			buildConfigurationList = 9A1DC89E1C21F24C0001AB58 /* Build configuration list for PBXProject "BotOSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A1DC89A1C21F24C0001AB58;
+			productRefGroup = 9A1DC8A41C21F24D0001AB58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A1DC8A21C21F24D0001AB58 /* BotOSX */,
+				9A1DC8B81C21F24D0001AB58 /* BotOSXTests */,
+				9A1DC8C31C21F24D0001AB58 /* BotOSXUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A1DC8A11C21F24D0001AB58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1DC8B01C21F24D0001AB58 /* Assets.xcassets in Resources */,
+				9A35CFA01C27664E00A2BFCF /* icon32.png in Resources */,
+				9A35CFA21C27664E00A2BFCF /* icon128.png in Resources */,
+				9A8BDC931C246EBD0066F99A /* play.png in Resources */,
+				9A1DC8B31C21F24D0001AB58 /* Main.storyboard in Resources */,
+				9A35CFA41C27664E00A2BFCF /* icon512.png in Resources */,
+				9A35CFA31C27664E00A2BFCF /* icon256.png in Resources */,
+				9A35CFA51C27664E00A2BFCF /* icon1024.png in Resources */,
+				9A8BDC921C246EBD0066F99A /* pause.png in Resources */,
+				9A35CF9F1C27664E00A2BFCF /* icon16.png in Resources */,
+				9A35CFA11C27664E00A2BFCF /* icon64.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1DC8B71C21F24D0001AB58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1DC8C21C21F24D0001AB58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		583CAE5008D93C321151CEF1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DE5F3528986FC9DC71A8668 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9D761C3898E5F8E6820C913 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A1DC89F1C21F24D0001AB58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1DC8AE1C21F24D0001AB58 /* ViewController.m in Sources */,
+				9A1DC8AB1C21F24D0001AB58 /* main.m in Sources */,
+				9A1DC8A81C21F24D0001AB58 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1DC8B51C21F24D0001AB58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1DC8BE1C21F24D0001AB58 /* BotOSXTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1DC8C01C21F24D0001AB58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1DC8C91C21F24D0001AB58 /* BotOSXUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A1DC8BB1C21F24D0001AB58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A1DC8A21C21F24D0001AB58 /* BotOSX */;
+			targetProxy = 9A1DC8BA1C21F24D0001AB58 /* PBXContainerItemProxy */;
+		};
+		9A1DC8C61C21F24D0001AB58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A1DC8A21C21F24D0001AB58 /* BotOSX */;
+			targetProxy = 9A1DC8C51C21F24D0001AB58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A1DC8B11C21F24D0001AB58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A1DC8B21C21F24D0001AB58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A1DC8CB1C21F24D0001AB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9A1DC8CC1C21F24D0001AB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9A1DC8CE1C21F24D0001AB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FFB19CCD04AB61FB48D1B7D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BotOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "Devil-Academy.BotOSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9A1DC8CF1C21F24D0001AB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F3B474B89DD3656A521C8E /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BotOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "Devil-Academy.BotOSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9A1DC8D11C21F24D0001AB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BotOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Devil-Academy.BotOSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BotOSX.app/Contents/MacOS/BotOSX";
+			};
+			name = Debug;
+		};
+		9A1DC8D21C21F24D0001AB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BotOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Devil-Academy.BotOSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BotOSX.app/Contents/MacOS/BotOSX";
+			};
+			name = Release;
+		};
+		9A1DC8D41C21F24D0001AB58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BotOSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Devil-Academy.BotOSXUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BotOSX;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9A1DC8D51C21F24D0001AB58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BotOSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Devil-Academy.BotOSXUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BotOSX;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A1DC89E1C21F24C0001AB58 /* Build configuration list for PBXProject "BotOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1DC8CB1C21F24D0001AB58 /* Debug */,
+				9A1DC8CC1C21F24D0001AB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1DC8CD1C21F24D0001AB58 /* Build configuration list for PBXNativeTarget "BotOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1DC8CE1C21F24D0001AB58 /* Debug */,
+				9A1DC8CF1C21F24D0001AB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1DC8D01C21F24D0001AB58 /* Build configuration list for PBXNativeTarget "BotOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1DC8D11C21F24D0001AB58 /* Debug */,
+				9A1DC8D21C21F24D0001AB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1DC8D31C21F24D0001AB58 /* Build configuration list for PBXNativeTarget "BotOSXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1DC8D41C21F24D0001AB58 /* Debug */,
+				9A1DC8D51C21F24D0001AB58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A1DC89B1C21F24C0001AB58 /* Project object */;
+}
