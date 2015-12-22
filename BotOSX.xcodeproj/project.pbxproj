@@ -10,7 +10,7 @@
 		65441EDB3D8416234F9D3873 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 142C290660A2B86D925379B8 /* libPods.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		9A1DC8A81C21F24D0001AB58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */; };
 		9A1DC8AB1C21F24D0001AB58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AA1C21F24D0001AB58 /* main.m */; };
-		9A1DC8AE1C21F24D0001AB58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AD1C21F24D0001AB58 /* ViewController.m */; };
+		9A1DC8AE1C21F24D0001AB58 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AD1C21F24D0001AB58 /* MainViewController.m */; };
 		9A1DC8B01C21F24D0001AB58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1DC8AF1C21F24D0001AB58 /* Assets.xcassets */; };
 		9A1DC8B31C21F24D0001AB58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A1DC8B11C21F24D0001AB58 /* Main.storyboard */; };
 		9A1DC8BE1C21F24D0001AB58 /* BotOSXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1DC8BD1C21F24D0001AB58 /* BotOSXTests.m */; };
@@ -51,8 +51,8 @@
 		9A1DC8A61C21F24D0001AB58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A1DC8AA1C21F24D0001AB58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9A1DC8AC1C21F24D0001AB58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9A1DC8AD1C21F24D0001AB58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9A1DC8AC1C21F24D0001AB58 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9A1DC8AD1C21F24D0001AB58 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9A1DC8AF1C21F24D0001AB58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A1DC8B21C21F24D0001AB58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A1DC8B41C21F24D0001AB58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 				9A463F771C2764C60062CADD /* Icons */,
 				9A1DC8A61C21F24D0001AB58 /* AppDelegate.h */,
 				9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */,
-				9A1DC8AC1C21F24D0001AB58 /* ViewController.h */,
-				9A1DC8AD1C21F24D0001AB58 /* ViewController.m */,
+				9A1DC8AC1C21F24D0001AB58 /* MainViewController.h */,
+				9A1DC8AD1C21F24D0001AB58 /* MainViewController.m */,
 				9A1DC8AF1C21F24D0001AB58 /* Assets.xcassets */,
 				9A1DC8B11C21F24D0001AB58 /* Main.storyboard */,
 				9A1DC8B41C21F24D0001AB58 /* Info.plist */,
@@ -394,7 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A1DC8AE1C21F24D0001AB58 /* ViewController.m in Sources */,
+				9A1DC8AE1C21F24D0001AB58 /* MainViewController.m in Sources */,
 				9A1DC8AB1C21F24D0001AB58 /* main.m in Sources */,
 				9A1DC8A81C21F24D0001AB58 /* AppDelegate.m in Sources */,
 			);

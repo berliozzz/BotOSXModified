@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <AFNetworking/AFNetworking.h>
 
-@interface ViewController : NSViewController <NSControlTextEditingDelegate>
+@interface MainViewController : NSViewController
 
 @property (weak) IBOutlet NSTextField *outLabel;
 @property (weak) IBOutlet NSTextField *inURLField;

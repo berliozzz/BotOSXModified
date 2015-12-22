@@ -6,7 +6,7 @@
 //  Copyright © 2015 Nikolay Berlioz. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import <AFNetworking/AFNetworking.h>
 
 static NSString *kSaveApiKey   = @"api";
@@ -15,7 +15,7 @@ static NSString *kSaveMinPrice = @"price";
 static NSString *kSaveDelay    = @"delay";
 static NSString *kSaveCount    = @"count";
 
-@interface ViewController() <NSTableViewDataSource>
+@interface MainViewController() <NSTableViewDataSource>
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 @property (weak) IBOutlet NSTableView *linkTableView;
@@ -25,7 +25,7 @@ static NSString *kSaveCount    = @"count";
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 {
     //переменные для метода getJSON
     __block NSInteger countFound;
@@ -43,12 +43,11 @@ static NSString *kSaveCount    = @"count";
     NSString *instanceId;
     
     //timer
-    NSTimer *myTimer;
+    NSTimer *requestsTimer;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     
     [self loadData]; //загружем данные
     
@@ -56,8 +55,6 @@ static NSString *kSaveCount    = @"count";
     //ссылка для получения JSON
     
     manager = [AFHTTPSessionManager manager];
-    
-
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -66,7 +63,7 @@ static NSString *kSaveCount    = @"count";
     // Update the view, if already loaded.
 }
 
-#pragma mark Save and Load
+#pragma mark - Save and Load
 
 //сохраняем данные из текстовых полей, чтобы не вводить снова при запуске
 - (void) saveData
@@ -102,16 +99,8 @@ static NSString *kSaveCount    = @"count";
     return result.length > 0 ? result : @""; //если длинна строки меньше 0, возвр пустую строку
 }
 
-#pragma mark - NSControlTextEditingDelegate
-
-- (BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor
-{
-    [self saveData];
-    
-    return YES;
-}
-
 #pragma mark - NSTableViewDataSource
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
 {
     return self.linkStorage.count;
@@ -148,19 +137,19 @@ static NSString *kSaveCount    = @"count";
         stringWithClassAndInstanceId = [stringWithClassAndInstanceId substringFromIndex:range.location];
     }
     
-    NSRange range2 = [stringWithClassAndInstanceId rangeOfString:@"-"];
+    range = [stringWithClassAndInstanceId rangeOfString:@"-"];
     //если нашли "-" обрезаем по него и получаем classid
-    if (range2.location != NSNotFound)
+    if (range.location != NSNotFound)
     {
-        classId = [stringWithClassAndInstanceId substringToIndex:range2.location];
-        stringWithClassAndInstanceId = [stringWithClassAndInstanceId substringFromIndex:range2.location + 1];
+        classId = [stringWithClassAndInstanceId substringToIndex:range.location];
+        stringWithClassAndInstanceId = [stringWithClassAndInstanceId substringFromIndex:range.location + 1];
     }
     
-    NSRange range3 = [stringWithClassAndInstanceId rangeOfString:@"-"];
+    range = [stringWithClassAndInstanceId rangeOfString:@"-"];
     //если нашли "-" обрезаем от него и получаем instanceId
-    if (range3.location != NSNotFound)
+    if (range.location != NSNotFound)
     {
-        instanceId = [stringWithClassAndInstanceId substringToIndex:range3.location];
+        instanceId = [stringWithClassAndInstanceId substringToIndex:range.location];
     }
     
     //собираем готовую строку для запроса
@@ -237,25 +226,23 @@ static NSString *kSaveCount    = @"count";
 {
     CGFloat delay = [self.delayField.stringValue floatValue];
     
-    myTimer = [NSTimer scheduledTimerWithTimeInterval:delay target:self selector:@selector(getJSON) userInfo:nil repeats:YES];
+    requestsTimer = [NSTimer scheduledTimerWithTimeInterval:delay target:self selector:@selector(getJSON) userInfo:nil repeats:YES];
     
     self.startPauseImageView.image = [NSImage imageNamed:@"play.png"];
+    
+    [self saveData];
 }
 
 - (IBAction)actionStop:(NSButton *)sender
 {
-    if ([myTimer isValid]) {
-        [myTimer invalidate];
+    if ([requestsTimer isValid]) {
+        [requestsTimer invalidate];
     }
     
     countFound = 0;
     [self.countFoundLabel setStringValue:[NSString stringWithFormat:@"found: %li", countFound]];
     self.startPauseImageView.image = [NSImage imageNamed:@"pause.png"];
 }
-
-
-
-
 
 - (IBAction)addNewLink:(id)sender
 {
