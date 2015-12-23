@@ -15,11 +15,9 @@ static NSString *kSaveMinPrice = @"price";
 static NSString *kSaveDelay    = @"delay";
 static NSString *kSaveCount    = @"count";
 
-@interface MainViewController() <NSTableViewDataSource>
+@interface MainViewController() <NSTableViewDataSource, NSTableViewDelegate>
 
-@property (nonatomic, strong) NSOperationQueue *operationQueue;
 @property (weak) IBOutlet NSTableView *linkTableView;
-
 @property (nonatomic, strong) NSMutableArray *linkStorage;
 - (IBAction)addNewLink:(id)sender;
 
@@ -103,22 +101,12 @@ static NSString *kSaveCount    = @"count";
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
 {
-    return self.linkStorage.count;
+    return self.linkStorage.count; //количество строк в таблице
 }
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row;
 {
-    id returnValue=nil;
-    
-    NSString *columnIdentifer = [tableColumn identifier];
-    
-    NSString *theName = [self.linkStorage objectAtIndex:row];
-    
-    if ([columnIdentifer isEqualToString:@"name"]) {
-        returnValue = theName;
-    }
-    
-    return returnValue;
+    return [self.linkStorage objectAtIndex:row]; //добавляем строку в таблицу
 }
 
 #pragma mark - Private methods
