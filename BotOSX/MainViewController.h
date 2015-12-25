@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <AFNetworking/AFNetworking.h>
+#import "ItemClass.h"
 
 @interface MainViewController : NSViewController
 
@@ -28,6 +29,7 @@
 - (IBAction)actionStart:(NSButton *)sender;
 - (IBAction)actionStop:(NSButton *)sender;
 
+- (IBAction)actionDelRow:(NSButton *)sender;
 
 
 

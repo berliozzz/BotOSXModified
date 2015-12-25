@@ -22,6 +22,7 @@
 		9A35CFA31C27664E00A2BFCF /* icon256.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9C1C27664E00A2BFCF /* icon256.png */; };
 		9A35CFA41C27664E00A2BFCF /* icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9D1C27664E00A2BFCF /* icon512.png */; };
 		9A35CFA51C27664E00A2BFCF /* icon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A35CF9E1C27664E00A2BFCF /* icon1024.png */; };
+		9A5362161C2AB99100221E9E /* ItemClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A5362151C2AB99100221E9E /* ItemClass.m */; };
 		9A8BDC921C246EBD0066F99A /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDC901C246EBD0066F99A /* pause.png */; };
 		9A8BDC931C246EBD0066F99A /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BDC911C246EBD0066F99A /* play.png */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,8 @@
 		9A35CF9C1C27664E00A2BFCF /* icon256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon256.png; sourceTree = "<group>"; };
 		9A35CF9D1C27664E00A2BFCF /* icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon512.png; sourceTree = "<group>"; };
 		9A35CF9E1C27664E00A2BFCF /* icon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024.png; sourceTree = "<group>"; };
+		9A5362141C2AB99100221E9E /* ItemClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemClass.h; sourceTree = "<group>"; };
+		9A5362151C2AB99100221E9E /* ItemClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemClass.m; sourceTree = "<group>"; };
 		9A8BDC901C246EBD0066F99A /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		9A8BDC911C246EBD0066F99A /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				9A463F771C2764C60062CADD /* Icons */,
+				9A5362141C2AB99100221E9E /* ItemClass.h */,
+				9A5362151C2AB99100221E9E /* ItemClass.m */,
 				9A1DC8A61C21F24D0001AB58 /* AppDelegate.h */,
 				9A1DC8A71C21F24D0001AB58 /* AppDelegate.m */,
 				9A1DC8AC1C21F24D0001AB58 /* MainViewController.h */,
@@ -397,6 +402,7 @@
 				9A1DC8AE1C21F24D0001AB58 /* MainViewController.m in Sources */,
 				9A1DC8AB1C21F24D0001AB58 /* main.m in Sources */,
 				9A1DC8A81C21F24D0001AB58 /* AppDelegate.m in Sources */,
+				9A5362161C2AB99100221E9E /* ItemClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

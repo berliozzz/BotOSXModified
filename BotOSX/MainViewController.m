@@ -21,6 +21,7 @@ static NSString *kSaveCount    = @"count";
 @property (nonatomic, strong) NSMutableArray *linkStorage;
 - (IBAction)addNewLink:(id)sender;
 
+
 @end
 
 @implementation MainViewController
@@ -39,6 +40,8 @@ static NSString *kSaveCount    = @"count";
     NSCharacterSet *set;
     NSString *classId;
     NSString *instanceId;
+    
+    NSString *name;
     
     //timer
     NSTimer *requestsTimer;
@@ -101,12 +104,39 @@ static NSString *kSaveCount    = @"count";
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
 {
-    return self.linkStorage.count; //количество строк в таблице
+    if (tableView == self.linkTableView)
+    {
+        return self.linkStorage.count; //количество строк в таблице
+    }
+    
+    return NO;
 }
 
 - (nullable id)tableView:(NSTableView *)tableView objectValueForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row;
 {
-    return [self.linkStorage objectAtIndex:row]; //добавляем строку в таблицу
+    if (tableView == self.linkTableView)
+    {
+        NSString *ident = tableColumn.identifier; // Получаем значение Identifier колонки
+        
+        ItemClass* item = [self.linkStorage objectAtIndex:row]; // получаем объект данных для строки
+        
+        return [item valueForKey:ident]; // Возвращаем значение соответствующего свойства
+    }
+    
+    return nil;
+}
+
+- (void) tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    if(row != -1)
+    {
+        if(tableView == self.linkTableView)
+        {
+            NSString* ident = tableColumn.identifier;
+            ItemClass* item = [self.linkStorage objectAtIndex:row];
+            [item setValue:object forKey:ident]; //Устанавливаем значение для соответствующего свойства
+        }
+    }
 }
 
 #pragma mark - Private methods
@@ -166,10 +196,10 @@ static NSString *kSaveCount    = @"count";
     }];
 }
 
-- (void)printMinPriceValuesWithName:(NSString *)name minPrice:(NSInteger)minPrice itemsFoundCount:(NSInteger)count
+- (void)printMinPriceValuesWithName:(NSString *)nameItem minPrice:(NSInteger)minPrice itemsFoundCount:(NSInteger)count
 {
     //выводим название вещи и её минимальную цену
-    [self.outLabel setStringValue:[NSString stringWithFormat:@"%@\nМинимальная цена = %.2f рублей", name, (float)minPriceInt / 100]];
+    [self.outLabel setStringValue:[NSString stringWithFormat:@"%@\nМинимальная цена = %.2f рублей", nameItem, (float)minPriceInt / 100]];
     [self.countFoundLabel setStringValue:[NSString stringWithFormat:@"found: %li", countFound]];
 }
 
@@ -177,7 +207,7 @@ static NSString *kSaveCount    = @"count";
 {
     //достаем нужные значениия из JSON
     hash = responseObject[@"hash"];
-    NSString *name = responseObject[@"market_name"];
+    name = responseObject[@"market_name"];
     minPriceInt = [responseObject[@"min_price"] integerValue];
     minPriceForBuy = [self.minPriceField.stringValue integerValue];
     buyTotal = [self.countItemField.stringValue integerValue];
@@ -191,21 +221,47 @@ static NSString *kSaveCount    = @"count";
     
     [manager GET:stringURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress)
      {
-        ;
+         ;
     } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
         
+        NSLog(@"success");
         [self parseItemListResponseObject:responseObject];
         
         //если меньше указанной суммы, покупаем
-        if (minPriceInt <= minPriceForBuy && buyTotal > 0)
-        {
-            [self itemPurchaseRequestSent];
-        }
+//        if (minPriceInt <= minPriceForBuy && buyTotal > 0)
+//        {
+//            [self itemPurchaseRequestSent];
+//        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"Bad response");
     }];
+}
+
+- (void) getDataForTableView
+{
+    stringURL = [self getCorrectURLstring];
     
+    [manager GET:stringURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress)
+     {
+         ;
+     } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *  _Nullable responseObject) {
+         
+         ItemClass *item = [[ItemClass alloc] init];
+         
+         item.itemName = responseObject[@"market_name"];
+         item.itemCount = 0;
+         item.itemBuyPrice = 0;
+         item.itemCurrentPrice = [responseObject[@"min_price"] integerValue];
+         item.itemHash = responseObject[@"hash"];
+         
+         [self.linkStorage addObject:item];
+         
+         [self.linkTableView reloadData];
+         
+     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         NSLog(@"Bad response");
+     }];
 }
 
 #pragma mark - Actions
@@ -235,9 +291,33 @@ static NSString *kSaveCount    = @"count";
 - (IBAction)addNewLink:(id)sender
 {
     NSString *value = self.inURLField.stringValue;
-    if(value.length) {
-        [self.linkStorage addObject:value];
+    if(value.length)
+    {
+        [self getDataForTableView];
+    }
+}
+
+/* 
+ * кнопка удаления выбранной строки в таблице
+ */
+- (IBAction)actionDelRow:(NSButton *)sender
+{
+    NSInteger row = self.linkTableView.selectedRow;//Узнаем отмеченную строку
+    
+    if(row != -1)
+    {
+        [self.linkTableView abortEditing];
+        [self.linkStorage removeObjectAtIndex:row];
         [self.linkTableView reloadData];
     }
 }
+
+
+
+
+
+
+
+
+
 @end
